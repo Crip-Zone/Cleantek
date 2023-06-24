@@ -8,6 +8,7 @@
 	border-radius: 0;
 	box-sizing: content-box;
 	margin: 0;
+	border: none;
 }
 #calendar .roundframe {
 	box-shadow: none;
@@ -29,27 +30,13 @@
 }
 /* Used to indicate the current day in the grid. */
 #main_grid .calendar_today {
-   background: -webkit-gradient(linear, left top, left bottom, from(#ffffff), to(#a7a9ac));
-   background: -moz-linear-gradient(top, #ffffff, #a7a9ac);
-   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#ffffffff, endColorstr=#ffa7a9ac);
-   -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#ffffffff, endColorstr=#ffa7a9ac)";
-   -moz-box-shadow: 3px 3px 3px #000;
-   -webkit-box-shadow: 3px 3px 3px #000;
-   box-shadow: 3px 3px 3px #000;
-   filter: progid:DXImageTransform.Microsoft.Shadow(color='#767676', Direction=135, Strength=5);
+   background: #a7a9ac;
 }
 #main_grid .calendar_today:hover {
    color: #000;
 }
 #month_grid .calendar_today {
-   background: -webkit-gradient(linear, left top, left bottom, from(#ffffff), to(#a7a9ac));
-   background: -moz-linear-gradient(top, #ffffff, #a7a9ac);
-   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#ffffffff, endColorstr=#ffa7a9ac);
-   -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#ffffffff, endColorstr=#ffa7a9ac)";
-   -moz-box-shadow: 3px 3px 3px #000;
-   -webkit-box-shadow: 3px 3px 3px #000;
-   box-shadow: 3px 3px 3px #000;
-   filter: progid:DXImageTransform.Microsoft.Shadow(color='#767676', Direction=135, Strength=5);
+   background: #a7a9ac;
 }
 .windowbg:nth-of-type(odd), .bg.odd {
   background: #d9e4ef;
@@ -234,7 +221,7 @@ td.days:hover {
 	padding: 5px;
 }
 #month_grid td.days a:hover {
-	text-decoration: bold;
+	text-decoration: underline;
 	background: rgba(97, 135, 166, 0.2);
 }
 #main_grid tbody tr:nth-child(2) td.days,
@@ -294,12 +281,12 @@ span.hidelink {
 }
 #view_button {
 	margin-left: inherit;
-   background: #8ca9ff;
-   border: 1px solid #aaa;
+	background: #8ca9ff;
+	border: 1px solid #aaa;
 }
 #main_grid .buttonrow,
 #main_grid .buttonlist {
-	margin: 5px 0;
+	margin: 7px 0 0 0;
 	padding: 0
 }
 #main_grid td.days,

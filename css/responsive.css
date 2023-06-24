@@ -1,9 +1,5 @@
 /* Some very big stuff? Dunno... */
 @media (min-width: 856px) and (max-width: 1024px) {
-	.lastpost {
-		width: 20%;
-		margin: 3px 0 0 5px;
-	}
 	#alerts .alert_time {
 		display: none;
 	}
@@ -15,9 +11,6 @@
 /* Still not enough data or people to test this... */
 /* This needs more data and this range is probably for iPad Air (alike) tablets... */
 @media (min-width: 721px) and (max-width: 855px) {
-	.lastpost {
-		margin: 0 0 0 20px;
-	}
 	.board_stats {
 		display: none;
 	}
@@ -134,7 +127,7 @@
 
 	/* Stuff */
 	#top_info {
-		padding: 10px;
+		padding: 0px;
 	}
 	.infolinks {
 		display: inline-block;
@@ -150,7 +143,6 @@
 	#quick_actions {
 		display: flex;
 		justify-content: flex-end;
-		flex-wrap: wrap;
 	}
 	#quick_actions > * {
 		flex: 0 1 auto;
@@ -185,8 +177,11 @@
 		padding-bottom: 1px;
 	}
 	#top_section {
-		height: 40px;
+		height: 35px;
 	}
+	#top_info {
+       line-height: 2.2em;
+    }
 	#top_info > li > a {
 		padding: 0 7px 7px 7px;
 		margin: -3px -19px 5px 12px;
@@ -487,7 +482,6 @@
 		border-width: 0;
 		background: none;
 		border-radius: 7px;
-		background: #e8e8e8;
 	}
 }
 @media (max-width: 560px) {
@@ -508,10 +502,10 @@
 	#adm_submenus .popup_heading {
 		display: block;
 		color: #fff;
-		background: #1686d2;
 	}
 	#main_menu {
-		margin: 0;
+		margin: 0px 0px -30px 0px;
+		background: transparent;
 	}
 	#main_menu .popup_window,
 	#genericmenu .popup_window,
@@ -523,7 +517,6 @@
 		overflow-x: hidden;
 		overflow-y: scroll;
 		border-radius: 7px;
-		background: linear-gradient(to bottom, #fefefe 0, #dedede 50%);
 	}
 	.popup_window {
 		top: 15%;
@@ -533,7 +526,6 @@
 		overflow-x: hidden;
 		overflow-y: scroll;
 		border-radius: 7px;
-		background: #1686d9;
 	}
 	#adm_submenus .popup_window {
 		background: #fff;
@@ -918,21 +910,8 @@
 /* iPhone Tests */
 @media (max-width: 320px) {
 
-}
-.column {
-  float: right;
-  width: 30%;
-/*  padding: none; */
-}
-
-/* Clear floats after the columns */
-.row:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-
 /* For the Packages Permissions th */
 form th {
-	color: #000;
+	color: #fff;
+}
 }
