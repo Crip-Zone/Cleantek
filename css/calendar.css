@@ -224,19 +224,6 @@ td.days:hover {
 	text-decoration: underline;
 	background: rgba(97, 135, 166, 0.2);
 }
-#main_grid tbody tr:nth-child(2) td.days,
-#month_grid tbody tr:nth-child(2) {
-}
-#main_grid tbody tr.days_wrapper > td:nth-child(2),
-#month_grid tr.days_wrapper > td:nth-child(2) {
-/*	border-left: 1px solid #fff; */
-}
-#main_grid tr.days_wrapper:nth-child(2) > td.weeks {
-/*	border-top: 1px solid #fff; */
-}
-#main_grid table:last-child td.weeks {
-/*	border-bottom: 1px solid #fff; */
-}
 #main_grid tr:not(.days_wrapper) th,
 #main_grid tr:not(.days_wrapper) td {
 	min-height: 30px;
@@ -266,9 +253,6 @@ div.week_month_title a {
 }
 td.week_post {
 	vertical-align: middle !important;
-}
-div.week_add_event {
-	/* text-align: center; */
 }
 div.week_add_event > a {
 	color: #999;

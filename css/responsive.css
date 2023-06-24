@@ -143,6 +143,7 @@
 	#quick_actions {
 		display: flex;
 		justify-content: flex-end;
+		flex-wrap: wrap;
 	}
 	#quick_actions > * {
 		flex: 0 1 auto;
@@ -166,9 +167,6 @@
 	}
 	#profile_menu_top > img.avatar {
 		margin: 4px 5px 0 0;
-	}
-	.navigate_section ul {
-/*		margin: 4px 0 -10px 0; */
 	}
 	#wrapper {
 		border-left: 0;
