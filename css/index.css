@@ -5,9 +5,9 @@ html {
 	scroll-padding-top: 3rem;
 }
 body {
-	background: #0588bc url(../images/id/b_grd.png) repeat-x;
+	background: #FEFEFE url(../images/id/b_grd.png) repeat-x;
 	font: 78%/130% "Verdana", "Arial", "Helvetica", sans-serif;
-	color: #1686d9;
+	color: #444;
 	display: flex;
 	flex-direction: column;
 	min-height: 100vh;
@@ -38,13 +38,12 @@ abbr {
 }
 input, button, select, textarea {
 	color: #222;
-	font: 83.33%/150% "Segoe UI", "Helvetica Neue", "Nimbus Sans L", Arial, "Liberation Sans", sans-serif;
+	font: 78%/130% "Verdana", "Arial", "Helvetica", sans-serif;
 	background: #fff;
 	outline: none;
 	border: 1px solid #bbb;
 	vertical-align: middle;
 	border-radius: 3px;
-	box-shadow: 1px 2px 1px rgba(160, 187, 221, 0.2) inset;
 	padding: 0.3em 0.4em;
 }
 input:hover, textarea:hover, button:hover, select:hover {
@@ -109,6 +108,9 @@ dd textarea {
 /* Apply the font only to these elements */
 input, button, select {
 	font-size: 0.75rem;
+}
+.block select {
+	font-size: 0.65rem;
 }
 /* Number inputs don't support size nor width, so add some common ones here and set a default... */
 input[type="number"] {
@@ -237,14 +239,15 @@ body#help_popup {
 	position: relative;
 	top: -2px;
 	padding: 0 4px;
-	background: linear-gradient(#f97b00,#884d00);
-	color: #fff;
+	background: url(../images/custom/topnav.jpg) repeat-x;
+	color: #2a89f7;
+	border: none;
 	font: 9px/15px verdana, sans-serif;
 	border-radius: 2px;
-	opacity: 0.8;
+	opacity: 1;
 }
 a.new_posts:visited {
-	color: #fff;
+	color: #000;
 }
 .new_posts:hover, .new_posts:focus {
 	text-decoration: none;
@@ -258,11 +261,9 @@ a.new_posts:visited {
 }
 .floatleft {
 	float: left;
-	display: flex 1;
 }
 .floatleft2 {
 	float: left;
-	display: flex;
 }
 .floatnone {
 	float: none;
@@ -341,7 +342,7 @@ h3.largetext {
 blockquote {
 	margin: 0 0 8px 0;
 	padding: 6px 10px;
-	font-size: 0.85rem;
+	font-size: 0.8rem;
 	border: 1px solid #d6dfe2;
 	border-top: 2px solid #aaa;
 	border-bottom: 2px solid #aaa;
@@ -354,7 +355,7 @@ blockquote cite {
 	margin-bottom: 3px;
 }
 blockquote cite::before {
-	color: #aaa;
+	color: #333;
 	font-size: 22px;
 	font-style: normal;
 	content: "\275D";
@@ -362,7 +363,7 @@ blockquote cite::before {
 	vertical-align: middle;
 }
 .bbc_standard_quote {
-/*	background-color: #e0e6f6; */
+    background-color: #e0e6f6; 
 }
 .bbc_alternate_quote {
 	background-color: #e0e6f6;
@@ -373,7 +374,6 @@ blockquote cite::before {
 	display: block;
 	font-size: 0.78rem;
 	background: #ebf4f8;
-
 	border-top: 2px solid #444;
 	border-bottom: 3px solid #444;
 	border-radius: 2px;
@@ -385,7 +385,7 @@ blockquote cite::before {
 }
 /* The "Quote:" and "Code:" header parts... */
 .codeheader, .quoteheader {
-	color: #666;
+	color: #000000;
 	font-size: 0.9em;
 	padding: 0 2px;
 }
@@ -457,31 +457,20 @@ a img {
 
 /* Those collapse and expand icons are wonderful. */
 .toggle_up::before, .toggle_down::before {
-	width: 17px;
-	height: 17px;
+	width: 13px;
+	height: 13px;
 	display: inline-block;
-	background: #f7f7f7 url(../images/icons/toggle.png) no-repeat 0 0 / 17px;
+	background: #f7f7f7 url(../images/icons/toggle.png) no-repeat 0 0 / 13px;
 	overflow: hidden;
 	content: "";
 	vertical-align: middle;
-/*	margin: 0 5px 0 5px; */
-	border: 1px solid #c5c5c5;
-	border-radius: 3px;
-	box-shadow: 0 1px 2px rgba(0, 0, 0, .2),
-		0 1px 1px #fff inset,
-		0 -5px 4px rgba(0,0,0,.1) inset;
-	transition: background-color 0.25s;
+	margin: 0px;
+	border: none;
+
 }
 .toggle_down::before {
-	background-position: 0 -17px;
+	background-position: 0 -13px;
 }
-
-.toggle_up:hover:before, .toggle_down:hover:before {
-	background-color: #bfd4e7;
-	box-shadow: 0 1px 2px rgba(0, 0, 0, 0.25) inset;
-	transition: background-color 0.25s;
-}
-
 /* Generally, those [?] icons. This makes your cursor a help icon. */
 .help {
 	cursor: help;
@@ -506,7 +495,7 @@ a img {
 	clear: both;
 }
 .pagesection .pagelinks {
-	display: inline-block;
+	display: block;
 	float: left;
 }
 .pages::after, .jump_to::after, .code::after,
@@ -577,8 +566,9 @@ strong[id^='child_list_']::after {
 
 a.moderation_link, a.moderation_link:visited {
 	font-weight: bold;
-	padding: 0px 8px;
-	background: #f59e00;
+	padding: 0px 6px;
+	background: #19599F;
+	border-radius: 50%;
 }
 /* AJAX notification bar
 ------------------------------------------------------- */
@@ -629,7 +619,7 @@ dl.settings dt.windowbg {
 dl.settings dd {
 	width: 42%;
 	float: right;
-	margin: 0 0 3px 0;
+	margin: 0 0 2px 0;
 }
 dl.settings img {
 	margin: 0 10px 0 0;
@@ -649,8 +639,14 @@ table.table_grid td {
 .table_grid.half_content, .half_table {
 	width: 50%;
 }
+.half_table {
+	color: #fff;
+}
 .equal_table {
 	width: 33%;
+}
+.equal_table strong {
+	color: #fff;
 }
 .quarter_table {
 	width: 25%;
@@ -663,10 +659,10 @@ table.table_grid td {
 }
 
 .title_bar th {
-	padding: 4px 8px;
+	padding: 4px 6px;
 }
 .windowbg th {
-	padding: 4px 8px;
+	padding: 4px 6px;
 }
 .title_bar a {
 	color: #000;
@@ -725,22 +721,29 @@ img.sort, .sort {
 ------------------------------------------------------- */
 #top_info {
 	position: relative;
-	background: linear-gradient(to bottom, #fefefe 0, #dedede 50%);
-	height: 34px;
+	min-height: 32px;
 	border-top: #c6c6c6;
 	border-bottom: #969696;
+	padding: 0px 0;
+    line-height: 2.4em;
+    max-width: 100%;
 }
 .dropmenu {
 	position: relative;
-	background: linear-gradient(to bottom, #fefefe 0, #dedede 50%);
-	height: 100%;
-	margin: 0 -12px 0 -12px;
-	padding: 0 0 5px 12px;
 }
 /* Level 1 button background. */
-.dropmenu > li, #top_info > li {
+.dropmenu > li {
 	display: inline-block;
-	margin: 0 2px 0 1px;
+	margin: 0 2px 0px;
+	font-size: 0.9em;
+	line-height: 1.9em;
+	font-weight: bolder;
+	background: transparent	
+}
+
+#top_info > li {
+	display: inline-block;
+	margin: 0 2px 0 2px;
 	font-size: 0.9em;
 	line-height: 1.9em;
 	font-weight: bolder;
@@ -753,14 +756,30 @@ img.sort, .sort {
 /* For cases where we want to spotlight something specific to an item, e.g. an amount */
 .amt {
 	margin-left: 3px;
-	padding: 0 5px;
+	padding: 2px 5px;
 	color: #fff;
-	background: #6d90ad;
-	border-radius: 8px;
+	background: #19599F;
+	border-radius: 50%;
 }
-.dropmenu li .active .amt {
+#top_info > li > a.open .amt, .dropmenu li .active .amt {
 	background: #ddd;
 	color: #3763b8;
+}
+.dropmenu li:hover .amt, #top_info li:hover .amt {
+	color: #19599F;
+	background: #fff;
+}
+.dropmenu li:hover li a span.amt {
+    background: #19599F;
+	color: #fff;
+}
+.dropmenu li:hover li:hover a span.amt {
+    background: #fff;
+	color: #19599F;
+}
+.dropmenu li li:hover > a.amt, .dropmenu li li a.amt:focus, .dropmenu li li a.amt:hover {
+	background: #fff;
+	color: #19599F;
 }
 #top_info li .active .amt {
 	background: rgba(0, 0, 0, 0.2);
@@ -775,68 +794,87 @@ img.sort, .sort {
 }
 
 #top_info > li > a {
-	padding: 0 7px 0 7px;
+	padding: 3px 4px 3px 4px;
 	display: block;
 	border: 1px solid transparent;
-	border-radius: 4px;
+	border-radius: 7px;
+	margin: 2px 0px 0px 0px;
+	outline: none;
 }
 .dropmenu li a {
-	padding: 0 7px 0 7px;
+	padding: 3px 4px 3px 4px;
 	display: block;
 	border: 1px solid transparent;
-	border-radius: 4px;
-	margin: 6px -6px 0 0;
+	border-radius: 7px;
+	margin: 0px;
 	outline: none;
 }
 /* Level 1 active button. */
-/* .dropmenu a.active, #top_info a.active {
+
+.dropmenu li a.active {
 	color: #fff;
 	font-weight: bold;
-	border: 1px solid #efefef;
-	background: linear-gradient(to bottom, #4e91e9 0, #3763b8 50%);
-	text-shadow: 0 0 2px #000;
-} */
-.dropmenu li a.active, #top_info a.active {
+	background: url(../images/custom/topnav.jpg) repeat-x;
+	border: 1px solid transparent;
+	box-shadow: inset 0px 0px 1px 1px rgb(0,0,0,0.2);
+}
+
+ #top_info a.active {
 	color: #fff;
 	font-weight: bold;
-	background: linear-gradient(to bottom, #4e91e9 0, #3763b8 50%);
-	border: 1px solid #efefef;
+	background: url(../images/custom/topnav.jpg) repeat-x;
+	border: 1px solid transparent;
+	box-shadow: inset 0px 0px 1px 1px rgb(0,0,0,0.2);
 }
 /* Level 1 hover effects. */
 .dropmenu li a:hover  {
-	background: #1686d2;
-	border: 1px solid #1686d2;
 	color: #fff;
 	cursor: pointer;
 	text-decoration: none;
-	box-shadow: 0 4px 4px rgba(255, 255, 255, 0.1) inset;
+	background: url(../images/custom/topnav.jpg) repeat-x;
+	border: 1px solid transparent;
+	box-shadow: inset 0px 0px 1px 1px rgb(0,0,0,0.2);
 	text-shadow: none;
 }
-
 .dropmenu li:hover a{
-	background: #1686d2;
-	border: 1px solid #1686d2;
 	color: #fff;
 	cursor: pointer;
 	text-decoration: none;
-	box-shadow: 0 4px 4px rgba(255, 255, 255, 0.1) inset;
+	background: url(../images/custom/topnav.jpg) repeat-x;
+	border: 1px solid transparent;
+	box-shadow: inset 0px 0px 1px 1px rgb(0,0,0,0.2);
 	text-shadow: none;
 }
-.dropmenu li a:focus, #top_info > li > a:hover, #top_info > li:hover > a, #top_info > li > a.open {
-	background: #1686d2;
-	border: 1px solid #1686d2;
+.dropmenu li a:focus {
+	background: url(../images/custom/topnav.jpg) repeat-x;
+	border: 1px solid transparent;
+	box-shadow: inset 0px 0px 1px 1px rgb(0,0,0,0.2);
 	color: #fff;
 	cursor: pointer;
 	text-decoration: none;
-	box-shadow: 0 4px 4px rgba(255, 255, 255, 0.1) inset;
 	text-shadow: none;
+}
+#top_info > li > a:hover, #top_info > li:hover > a, #top_info > li > a.open {
+	color: #fff;
+	cursor: pointer;
+	text-decoration: none;
+	background: url(../images/custom/topnav.jpg) repeat-x;
+	border: 1px solid transparent;
+	box-shadow: inset 0px 0px 1px 1px rgb(0,0,0,0.2);
+	text-shadow: none;
+}
+#top_info li.button_login a:hover {
+    box-shadow: 0px 0px 3px 3px rgba(255, 255, 255, 0.2)inset;
+}
+#top_info li.button_signup a:hover {
+    box-shadow: 0px 0px 3px 3px rgba(255, 255, 255, 0.2)inset;
 }
 /* Level 1 active button. */
 .dropmenu li a.active:hover, .dropmenu li:hover a.active {
-	background: #1686d2;
-/*	border: 1px solid #efefef; */
+	background: url(../images/custom/topnav.jpg) repeat-x;
+	border: 1px solid transparent;
+	box-shadow: inset 0px 0px 1px 1px rgb(0,0,0,0.2);
 	color: #fff;
-/*	box-shadow: 0 5px 5px rgba(255, 255, 255, 0.2) inset; */
 	text-shadow: none;
 }
 
@@ -846,7 +884,11 @@ a[class^="mobile_generic_menu_"] {
 }
 
 #main_menu {
-	margin: 0 0 4px 0;
+	margin: 0px -12px 4px -12px;
+    background: rgb(223,223,223);
+    background: linear-gradient(0deg, rgba(223,223,223,1) 0%, rgba(254,254,254,1) 100%);
+    min-height: 32px;
+    padding: 4px 6px;
 }
 
 /* User information. */
@@ -871,12 +913,12 @@ a[class^="mobile_generic_menu_"] {
 	column-count: 2;
 }
 .profile_user_links li {
-	font-size: .8rem;
-	line-height: 2em;
-	padding-left: 24px;
-	text-indent: -24px;
-	-webkit-hyphens: auto;
-	hyphens: auto;
+    font-size: .7rem;
+    line-height: 2em;
+    padding-left: 24px;
+    text-indent: -24px;
+    -webkit-hyphens: auto;
+    hyphens: auto;
 }
 /* Fixes bug with border-box on scrollable js */
 .scrollable,
@@ -963,8 +1005,6 @@ a[class^="mobile_generic_menu_"] {
 	border: solid 1px #fff;
 	border-radius: 5px;
 	box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.6);
-   -moz-box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.6);
-   -webkit-box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.6);
 	background: #e3e3e3;
 }
 /* Level 2 link background. */
@@ -974,7 +1014,6 @@ a[class^="mobile_generic_menu_"] {
 	min-width: 17em;
 	font-size: 1em;
 	border-radius: 3px;
-/*	border: 1px solid transparent; */
 }
 /* Necessary to allow highlighting of 1st level while hovering over submenu. */
 .dropmenu li:hover li a, .dropmenu li li a {
@@ -984,6 +1023,7 @@ a[class^="mobile_generic_menu_"] {
 	border: none;
 	line-height: 2.2em;
 	width: max-content;
+	box-shadow: none;
 }
 
 .dropmenu li li a > img {
@@ -1065,8 +1105,8 @@ a[class^="mobile_generic_menu_"] {
 .button, .inline_mod_check {
 	display: inline-block;
 	padding: 0 8px;
-	color: #444;
-	font-size: 0.7rem;
+	color: #000;
+	font-size: 0.6rem;
 	line-height: 2em;
 	text-transform: uppercase;
 	cursor: pointer;
@@ -1074,7 +1114,20 @@ a[class^="mobile_generic_menu_"] {
 	border-radius: 3px;
 	box-sizing: border-box;
 	vertical-align: middle;
-	background: #eee;																				  
+	background: #eee;			
+	font-size: smaller;	
+	box-shadow: none;
+    border: none;
+	margin: 0px 1px;
+}
+.inline_mod_check {
+	font-size: 0.5rem;
+}
+.inline_mod_check:hover {
+	background: #5b7fb1;
+	border: none;
+	text-decoration: underline;
+	color: #fff;
 }
 html[lang="el-GR"] .button,
 html[lang="el-GR"] .quickbuttons > li > a,
@@ -1082,7 +1135,7 @@ html[lang="el-GR"] .inline_mod_check {
 	text-transform: capitalize;
 }
 .pagesection .button {
-	color: #346;
+	color: #000;
 }
 .button:hover, .button:focus, #search_form .button:hover {
 	background: #5b7fb1;
@@ -1090,46 +1143,12 @@ html[lang="el-GR"] .inline_mod_check {
 	text-decoration: none;
 	border-radius: 4px;
 }	
-.quickbuttons > li > a {
-	display: inline-block;
-	padding: 0 8px;
-	color: #fff;
-	font-size: 0.7rem;
-	line-height: 2em;
-	text-transform: uppercase;
-	cursor: pointer;
-	height: calc(2em + 2em * (0.9 - 0.85)); /* "input" font size minus ".button" font size */
-	border-radius: 0;
-	box-sizing: border-box;
-	vertical-align: middle;
-}
-.quickbuttons > li:first-child:hover > a, .quickbuttons > li:first-child:focus > a {
-	background: #5b7fb1;
-	color: #fff;
-	border: 1px solid #5b7fb1;
-	border-radius: 4px 0 0 4px;
-	text-decoration: none;
-}
-.quickbuttons > li:last-child:hover > a, .quickbuttons > li:last-child:focus > a {
-	background: #5b7fb1;
-	color: #fff;
-	border-radius: 0 4px 4px 0;
-	text-decoration: none;
-	height: 23px;
-}
-.quickbuttons > li:only-child:hover > a, .quickbuttons > li:only-child:focus > a {
-	background: #5b7fb1;
-	color: #fff;
-	border: 1px solid #5b7fb1;
-	border-radius: 0;
-	text-decoration: none;
-}
 /* the active one */
 .button.active {
 	background: #00406d;
 	color: #fff;
 	font-weight: bold;
-	border: 1px solid #558080;
+	border: none;
 }
 .button.active:hover, .button.active:focus {
 	color: #ddf;
@@ -1167,9 +1186,6 @@ html[lang="el-GR"] .inline_mod_check {
 
 /* Box-shadow only on this one. */
 #wrapper {
-	width: 90%;			
-	max-width: 1200px;
-	margin: 0 auto auto auto;
 	clear: both;
 	background: #fff;
 	border-bottom-right-radius: 20px;
@@ -1177,32 +1193,32 @@ html[lang="el-GR"] .inline_mod_check {
 }
 
 /* Set maximum width limit for content */
-#top_section .inner_wrap, #footer .inner_wrap {
+#wrapper, #header, #top_section .inner_wrap, #footer .inner_wrap {
 	max-width: 1200px;
 	margin: 0 auto;
-}
-#wrapper {
-/*	max-width: 1200px;
-	margin: 0 auto auto auto; */
+	width: 90%
 }
 
 /* The framing graphics */
 /* The top bar. */
 #top_section {
+	position: sticky;
+	top: 0;
 	border-top: #c6c6c6;
 	border-bottom: #969696;
 	background: linear-gradient(to bottom, #fefefe 0, #dedede 50%);
 	clear: both;
+	margin-bottom: 20px;
+	position: -webkit-sticky;
+    position: sticky;
+    bottom: 0px;
+    z-index: 20;
+	box-shadow: 0px 0px 3px 1px rgb(0,0,0);
 }
 #top_section::after {
 	content: "";
 	display: block;
 	clear: both;
-}
-#top_info {
-	padding: 5px 0;
-	line-height: 1.3em;
-	max-width: 100%;
 }
 #pm_menu, #alerts_menu, #profile_menu {
 	left: 0;
@@ -1226,6 +1242,9 @@ html[lang="el-GR"] .inline_mod_check {
 #languages_form, #search_form {
 	padding: 5px 0;
 }
+#search_form .button {
+  font-size: 0.9em;
+}
 #languages_form {
 	margin: 0 0 0 10px;
 }
@@ -1234,23 +1253,13 @@ html[lang="el-GR"] .inline_mod_check {
 	position: relative;
 	overflow: hidden;
 	clear: both;
-	background: #fff;
-	background: #D5D6D5;
-	background: -moz-linear-gradient(top, #d5d4d4 0%, #efefef 18%, #fefefe 73%, #dfdfdf 100%);
-	background: -webkit-linear-gradient(top, #d5d4d4 0%,#efefef 18%,#fefefe 73%,#dfdfdf 100%);
-	background: linear-gradient(to bottom, #d5d4d4 0%,#efefef 18%,#fefefe 73%,#dfdfdf 100%);
-    border-bottom: none;
-	border-top-left-radius: 10px;
-	border-top-right-radius: 10px;
-	margin-top: 30px;
-	margin-left: auto;
-	margin-right: auto;
-	padding: 40px 0px 50px 0px;
-	width: 90%;
-	display: flex;
-	align-items: flex-end;
-	max-width: 1200px;
-	margin: 25px auto 0 auto;
+/*  background: rgb(254,254,254); */
+    background: linear-gradient(to bottom, rgb(211, 210, 210) 0%, rgb(254, 254, 254) 37%, rgb(254, 255, 254) 100%);
+	padding: 2px 12px 0px 12px;
+	min-height: 147px;
+	border: none;
+	border-radius: 20px 20px 0px 0px;
+	margin-bottom: 0px;
 }
 #header::after {
 	content: "";
@@ -1263,7 +1272,8 @@ h1.forumtitle {
 	font-family: "Tahoma", sans-serif;
 	padding: 22px 12px 6px 10px;
 	font-weight: normal;
-	flex: 1 1 auto;
+	float: left;
+	clear: left;
 }
 h1.forumtitle a {
 	color: #19599f;
@@ -1271,7 +1281,7 @@ h1.forumtitle a {
 }
 /* Float these items to the right */
 #siteslogan, img#smflogo {
-	padding-right: 12px;
+	padding-right: 0px;
 	font-size: 1.4em;
 }
 /* Tweak the SMF logo */
@@ -1308,24 +1318,38 @@ img#smflogo {
 	background: #fdfdfd;
 }
 .user {
-	padding: 0 4px 8px 4px;
-	font-size: 0.9em;
+	padding: 20px 4px 8px 4px;
+    font-size: 1em;
+    font-family: verdana, sans-serif;
 	white-space: nowrap;
+	color: #346;
+	float: right;
+	clear: right;
+	text-align: right;
+}
+.user a{
+	color: #346;
+	text-decoration: none;
+}
+.user a:hover, .user a:active{
+	color: #346;
+	text-decoration: underline;
 }
 .user:only-child {
 	width: 100%;
-	display: flex;
-	justify-content: space-between;
+	display: block;
+}
+.user time {
+	font-weight: 700;
 }
 .user time,
 .user .unread_links,
 .user .unread_links li {
-	display: inline-block;
+	display: block;
 }
 .user:not(:last-child) time:not(:last-child)::after,
 .user .unread_links li:not(:last-child)::after {
-	content: " • ";
-	margin: 0 1ch;
+	margin: 0;
 }
 ul li.greeting {
 	font-weight: bold;
@@ -1337,51 +1361,57 @@ ul li.greeting {
 	margin-left: -2px;
 }
 /* News section. */
-#inner_wrap .news {
-	padding: 0 0 8px 1ch;
-	font-size: 0.9em;
-	display: flex;
-	align-items: baseline;
-	max-width: 50%;
+#header > .news {
+    clear: both;
+    margin: 55px 10px 0px 6px;
+    display: block;
+    float: left;
+    color: #000;
+    text-align: left;
+    font-size: 0.9em;
 }
-#inner_wrap .news h2 {
+#header > .news h2 {
 	line-height: initial;
 }
-#inner_wrap .news h2,
-#inner_wrap .news p {
+#header > .news h2 {
+	color: #000;
 	display: inline;
-	padding-left: 1ch;
+	padding-left: 1px;
+	font-weight: 700;
+}
+#header > .news p {
+	color: #444;
+	display: inline;
+	padding-left: 1px;
 }
 
 /* The navigation list (i.e. linktree) */
 .navigate_section {
-	padding: 3px 0 0 0;
+	padding: 4px 0px 0px 0px;
+	margin-top: 6px;
 	float: left;
 	width: 100%;
+	border-top: 1px dashed #f0f0f0;
 }
 #main_content_section .navigate_section {
 	margin: 4px 0 0 0;
 	padding: 0;
 }
 .navigate_section ul {
-/*	margin: 4px 0 0 0; */
 	padding: 0 10px;
-	font-size: 0.9em;
+	font-size: 1em;
 	overflow: hidden;
-/*	border: 1px solid #ddd;
-	border-radius: 2px;
-	box-shadow: 0 -2px 2px rgba(0, 0, 0, 0.08); */
+	font-weight: 700;
+	font-size: 0.9em;
 }
 .navigate_section ul li {
 	float: left;
 	padding-bottom: 3px;
 	line-height: 1.1em;
-	color: #444;
-	text-shadow: 1px 1px 0 #fff;
+	color: #000;
 }
 .navigate_section ul li a, .navigate_section ul li em {
-	padding: 4px 0 4px;
-	margin-top: -4px;
+	padding: 0px;
 	display: inline-block;
 }
 .navigate_section ul li span {
@@ -1389,9 +1419,9 @@ ul li.greeting {
 	margin-top: 8px;
 }
 .navigate_section ul li .dividers {
-	color: #3f6b8c;
-	font: 83.33%/150% Arial, sans-serif;
+	color: #000;
 	padding: 0 2px 0 6px;
+	font-weight: 700;
 }
 .navigate_section ul li .board_moderators a {
 	padding: 4px 0;
@@ -1407,7 +1437,7 @@ ul li.greeting {
 	clear: both;
 }
 #main_content_section {
-	padding: 5px 12px 16px 12px;
+	padding: 5px 20px 20px;
 }
 #main_content_section::after {
 	content: "";
@@ -1417,34 +1447,28 @@ ul li.greeting {
 /* Footer is now full-width by default. */
 /* The footer with copyright links etc. */
 #footer {
-    margin: 0px 0 25px 0;
-    padding: 19px 0 19px;
-    height: auto;
+	margin: 0px 0 25px 0;
+	padding: 19px 0 19px;
+	height: auto;
 	background: #ececec;
-	background: -moz-linear-gradient(top, #ececec 0%, #ffffff 14%, #ffffff 85%, #e7e7e7 100%);
-	background: -webkit-linear-gradient(top, #ececec 0%,#ffffff 14%,#ffffff 85%,#e7e7e7 100%); 
 	background: linear-gradient(to bottom, #ececec 0%,#ffffff 14%,#ffffff 85%,#e7e7e7 100%); 
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ececec', endColorstr='#e7e7e7',GradientType=0 );
-	border-top-right-radius: 20px;
-    border-top-left-radius: 20px;
-	border-bottom-left-radius: 20px;
-	border-bottom-right-radius: 20px;
+	border-radius: 20px;
 	border-top: 15px solid #10689C;
-    border-bottom: 15px solid #10689C;
+	border-bottom: 15px solid #10689C;
 	flex: none;
 	width: auto;
 	align-self: center;
 }
 #footer li, #footer p, #footer a {
-	font-size: 0.9em;
 	color: #555;
 }
 #footer li.copyright {
 	display: block;
 	font-family: Verdana, sans-serif; /* Copyright must be Verdana! */
+	font-weight: bold;
 }
 #footerfix {
-	/*flex: 1 0 auto;*/
+	flex: 1 0 auto
 }
 /* The posting icons */
 #postbuttons_upper ul li a span {
@@ -1459,9 +1483,19 @@ ul li.greeting {
 	margin: 0;
 	padding: 0;
 }
+
+/* the small stats */
+#index_common_stats {
+	margin: -4px 8px 6px 8px;
+	padding: 4px 0 0 0;
+	font-size: 0.9em;
+	border-top: 1px solid #ddd;
+}
+
 .fix_rtl_names {
 	display: inline-block;
 }
+
 /* The quick buttons */
 .quickbuttons {
 	margin: 0 0 5px;
@@ -1475,13 +1509,8 @@ ul li.greeting {
 .quickbuttons > li {
 	float: left;
 }
-.quickbuttons > li > a, .inline_mod_check {
-	display: block;
-	height: auto;
-	padding: 0 4px;
-	color: #222;
-	line-height: 1.375rem;
-	border-radius: 0;
+.quickbuttons > li:first-child {
+	border-radius: 4px 0px 0px 4px;
 }
 .quickbuttons > li:first-child > a {
 	border-radius: 4px 0 0 4px;
@@ -1490,9 +1519,45 @@ ul li.greeting {
 	border-radius: 0 4px 4px 0;
 }
 .quickbuttons > li:only-child > a, .inline_mod_check:only-child {
-	border-radius: 4px;
 	margin: 2px;
 	height: 23px;
+}
+.quickbuttons > li > a, .inline_mod_check {
+	display: inline-block;
+	padding: 0 4px;
+	color: #222;
+	font-size: 0.7rem;
+	line-height: 1.375rem;
+	text-transform: uppercase;
+	cursor: pointer;
+	height: calc(2em + 2em * (0.9 - 0.85)); /* "input" font size minus ".button" font size */
+	border-radius: 0px;
+	box-sizing: border-box;
+	vertical-align: middle;
+	background: #eee;
+}
+.quickbuttons > li > a:hover {
+	background: #5b7fb1;
+	border: none;
+	text-decoration: underline;
+	color: #fff;
+}
+.quickbuttons > li > a:focus-visible {
+	background: #eee;
+	border: none;
+	box-shadow: none;
+}
+.quickbuttons > li:first-child:hover > a, .quickbuttons > li:first-child:focus > a {
+	border: none;
+	text-decoration: underline;
+}
+.quickbuttons > li:last-child:hover > a, .quickbuttons > li:last-child:focus > a {
+	border: none;
+	text-decoration: underline;
+}
+.quickbuttons > li:only-child:hover > a, .quickbuttons > li:only-child:focus > a {
+	border: none;
+	text-decoration: underline;
 }
 .inline_mod_check input {
 	position: relative;
@@ -1546,7 +1611,7 @@ ul li.greeting {
 	margin: 0;
 }
 /* Fixes for quickbuttons
-   Fix for quote on reply box */
+	Fix for quote on reply box */
 #post_modify {
 	border-radius: 4px;
 }
@@ -2302,7 +2367,7 @@ tr.windowbg td, tr.bg td, .table_grid tr td {
 	border-radius: 2px;
 	position: relative;
 	overflow: hidden;
-	color: rgba(0, 0, 0, 0.6);
+	color: rgba(0, 0, 0, 0.8);
 }
 .generic_bar span, .progress_bar span {
 	position: relative;
@@ -2681,11 +2746,17 @@ dl.stats {
 }
 
 /* Forum history table. */
-#stats td, #stats th {
+#stats td {
 	width: 15%;
 	padding: 4px;
 	text-align: center;
 	color: #444;
+}
+#stats th.windowbg th.lefttext {
+	width: 15%;
+	padding: 4px;
+	text-align: center;
+	color: #fff;
 }
 #stats tr.windowbg th.lefttext {
 	text-align: left;
@@ -2999,22 +3070,22 @@ dl.addrules dt.floatleft {
 	background: #f0f4f7;
 	margin: 12px 0 0 0;
 	padding: 12px 16px;
-	border: 1px solid #ddd;
+	border: 1px solid #fff;
 	border-radius: 6px;
 	box-shadow: 0 -2px 2px rgba(0, 0, 0, 0.1);
 	overflow: auto;
 }
 /* Here comes the glory... */
 .windowbg:nth-of-type(even), .bg.even {
-	background: #f0f4f7;
+	background: #f0f5f8;
 }
 .windowbg:nth-of-type(odd), .bg.odd {
-	background: #fdfdfd;
+	background: #d9e4ef;
 }
 
 /* Highlight the target item */
 .windowbg:target {
-	background: #ffffe0;
+	background: #e0ffff
 }
 
 /* Add some hover on table rows */
@@ -3115,7 +3186,7 @@ div#manage_boards dl dd textarea[name=desc] {
 /* BoardIndex */
 /* This place covers board places (boardindex/messageindex/recent) */
 .boardindex_table:not(:last-child) {
-	margin-top: 15px;
+	margin-bottom: 15px;
 }
 h3 .collapse {
 	float: right;
@@ -3134,82 +3205,99 @@ h3 .collapse {
 	background-position: 0 -45px;
 }
 .board_icon a.board_redirect {
-	background-position: -45px -45px;
+	background-position: -49px -45px;
 }
 .board_icon {
-	text-align: center;
-	padding: 8px 0 0 0;
-	width: 60px;
-	flex-shrink: 0;
-}
-.boardindex_table .board_icon {
+	justify-content: center;
 	width: 80px;
-}
-.boardindex_table .info {
-	width: calc(55% - 80px);
-	padding-left: 15px;
-}
-.boardindex_table .board_stats {
-	padding: 13px 10px 10px;
-}
-.boardindex_table .board_stats p {
-/*	background: linear-gradient(to bottom, #fff 0%, #f1f3f5 95%);
-	background: #d9e4ef; */
+	background: #d9e4ef;
 }
 .info {
+	flex: 4;
 	overflow: hidden;
 	overflow-wrap: break-word;
-	padding: 5px 5px 5px 0;
-	flex-grow: 1;
+	background: #f0f5f8;
+	padding-top: 12px!important;
+}
+div[id^="board_"] .up_contain .info {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
 }
 .info .subject {
-	font-weight: 600;
-	font-size: 1.1em;
+	font-weight: bold;
+	font-size: 110%;
 	color: #19599F;
 }
 .board_stats {
-	width: 15%;
 	font-size: 0.9em;
-	margin: 0 0 0 auto;
-	text-align: center;
+	flex: 1;
+	justify-content: center;
+	background: #d9e4ef;
 }
 .lastpost {
-	width: 30%;
 	font-size: 0.9em;
-	padding-top: 3px;
-	padding-left: 15px;
+	flex: 2;
+	background: #f0f5f8;
 }
-.board_icon, .info, .board_stats, .lastpost {
-	display: inline-block;
-	align-self: center;
+div[id^="board_"].up_contain > div {
+	margin: 1px;
+	padding: 6px 8px;
 }
-#topic_container {
-	background: #f5f5f0;
+@media (min-width: 480px) {
+	.board_icon, .children, .board_stats, .lastpost {
+		align-items: center;
+		display: flex;
+	}
+	div[id^="board_"].up_contain {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+	}
+}
+@media (max-width: 480px) {
+	div[id^="board_"].up_contain > div {
+		display: block;
+		width: 100%;
+	}
+	div[id^="board_"].up_contain > div.board_icon {
+		display: none;
+	}
+		div[id^="board_"].up_contain > div.board_stats {
+		display: none;
+	}
+			div[id^="board_"].up_contain > div.lastpost{
+		display: none;
+	}
 }
 .main_container {
-	margin-bottom: 8px;
-	background: linear-gradient(to bottom, #fff 0%, #f5f5f5 95%);
+	margin-bottom: 20px;
 }
-.up_contain {
-	overflow: hidden;	
-	margin: 0 0 2px 0;
+.up_contain:not([id^="board_"]) {
+	overflow: hidden;
+	border: 1px solid #ddd;
+	margin: -1px 0 3px 0;
 	display: flex;
 	flex-wrap: wrap;
-	background: linear-gradient(to bottom, #fff 0%, #f5f5f5 95%);
+}
+.up_contain:hover {
+	overflow: hidden;
+	display: flex;
+	flex-wrap: wrap;
 }
 /* Child boards */
 .children {
 	padding: 5px;
 	width: 100%;
-	background: linear-gradient(to bottom, #fff 0%, #f5f5f5 95%);
+	background: #d9e4ef;
 	margin: 2px 0 0 0;
-	border-top: 1px solid #fdfdfd;
+	border-top: 1px solid #fff;
 }
 .children p {
 	font-size: 0.9em;
 }
 .children strong {
-	color: #19599F;
+	color: #555;
 }
 .children span::after {
 	content: ", ";
@@ -3229,7 +3317,7 @@ span.postby {
 	clear: both;
 }
 #info_center .sub_bar {
-	border-top: 1px solid #ddd;
+	border-top: none;
 }
 #info_center .sub_bar:first-child {
 	border-top: none;
@@ -3304,33 +3392,22 @@ span.postby {
 }
 /* Topic list */
 #topic_header {
-	display: flex;
+    display: flex;
 	color: #fff;
-	border-top: 2px solid #67d1ff;
-	border-left: 2px solid #67d1ff;
-	border-right: 2px solid #67d1ff;
-	padding: 2px;
-	border-top-left-radius: 6px;
-	border-top-right-radius: 6px;
-	box-shadow: 0px 0px 0px 1px #116ba1;
-	background: linear-gradient(to bottom, #3ba4e9 10%, #0b66a2 90%);
-	margin: 5px 1px 0 1px;
-	overflow: hidden;
 }
-#topic_header a {
-   color: #fff;
+#topic_header a{
+	color: #fff;
 }
 #topic_header div {
 	font-weight: bold;
 	font-size: 1em;
 	padding: 0;
-/*	background: linear-gradient(to bottom, #3ba4e9 10%, #0b66a2 90%); */
 }
 #topic_header input {
-	margin-top: 3px !important;
+	margin-top: 5px !important;
 }
 #topic_container .windowbg {
-	border: 1px solid rgba(0, 0, 0, 0.13);
+	border: 1px solid #fff;
 	border-top: none;
 	display: flex;
 	box-shadow: none;
@@ -3338,13 +3415,54 @@ span.postby {
 	padding: 0;
 	margin: 0;
 	overflow: hidden;
-	background: #f5f5f0;
+	padding: 6px 8px;
 }
-#topic_container .lastpost, #topic_header .lastpost {
+#topic_header .board_icon {
+	text-align: center;
+	padding: 8px 0 0 0;
+	width: 60px;
+	background: transparent;
+}
+#topic_container .board_icon {
+	text-align: center;
+	padding: 8px 0 0 0;
+	width: 60px;
+	background: transparent;
+}
+#topic_header .info {
+	background: transparent;
+	padding-top: 5px!important;
+}
+#topic_container .info {
+	background: transparent;
+	padding-top: 0px !important;
+}
+#topic_header .lastpost {
 	width: 20%;
+	background: transparent;
+	margin-top: 1px;
 }
-#topic_container .lastpost, #topic_container .board_stats {
+#topic_container .lastpost {
+	width: 20%;
+	background: transparent;
+}
+#topic_header .board_stats {
 	flex-shrink: 0;
+	background: transparent;
+}
+#topic_container .board_stats {
+	flex-shrink: 0;
+	background: transparent;
+}
+.icon img, .moderation input {
+	margin-top: 15px;
+}
+.moderation {
+	display: inline-block;
+	width: 35px;
+	flex-shrink: 0;
+	vertical-align: middle;
+	text-align: center;
 }
 .icon img, .moderation input {
 	margin-top: 10px;
@@ -3483,7 +3601,7 @@ div#pollmoderation {
 .poster h4, .poster h4 a, .poster li:hover h4 a, .poster h4 a:hover .poster li h4 a, .poster h4 a:focus {
 	margin: 0;
 	padding: 0;
-	color: #c06002;
+	color: #19599F;
 }
 
 .poster .profile .profile_icons li, .poster .im_icons li {
@@ -3554,7 +3672,7 @@ img.avatar {
 	display: block;
 }
 .keyinfo .postinfo a, .keyinfo .postinfo a strong {
-	color: #ad6825;
+	color: #19599F;
 }
 .keyinfo .postinfo .spacer {
 	flex: 1 1 auto;
@@ -3583,7 +3701,7 @@ img.avatar {
 	display: none;
 }
 .page_number {
-	color: #ad6825;
+	color: #19599F;
 	font-weight: bold;
 	padding: 4px 0 0 4px;
 	line-height: 1.5em;
@@ -3690,7 +3808,7 @@ ul.post_options li {
 	height: 22px;
 }
 #post_settings, #postAttachment, #postAttachment2, #attachment_previews {
-	padding: 10px 0;
+	padding: 0px;
 }
 #postAttachment dd, #postAttachment2 dd {
 	margin: 4px 0;
@@ -3832,7 +3950,7 @@ ul.post_options li {
 /* Cat_bar / catbg */
 div.cat_bar {
 	background: linear-gradient(to bottom, #3DA6EB 0%, #0B65A1 100%);
-	border: 2px solid #67d1ff;
+	border: 1px solid #67d1ff;
 	padding: 0;
 	border-radius: 6px;
 	box-shadow: 0px 0px 0px 2px #116ba1;
@@ -3851,19 +3969,20 @@ h3.catbg .cat_bar {
 	border-radius: 6px;
 }
 .cat_bar h3 {
-	padding: 3px 12px 6px 12px;
+	padding: 6px;
 }
 /* Styles for rounded headers. */
 .cat_bar .desc {
 	color: #fff;
 	font-size: 12px;
-	line-height: 1.5em;
-	font-weight: normal;
-	margin: -8px 0 4px 12px;
+	line-height: 1em;
+	font-weight: bold;
+	margin: 0px 0px 0px 10px;
 }
 .cat_bar .desc a {
 	color: #fff;
-	font-weight: 600;
+	font-weight: bold;
+	text-decoration: underline;
 }
 h3.catbg {
 	overflow: hidden;
@@ -3901,24 +4020,39 @@ h3.catbg .main_icons::before, h3.catbg .icon {
 	padding: 12px 16px;
 	background: #f5f5f5;
 	border: 1px solid #c5c5c5;
-	border-radius: 7px;
+	border-radius: 6px;
 	box-shadow: 0 -2px 2px rgba(0, 0, 0, 0.1);
 	overflow: auto;
 }
 /* TitleBar & SubBar */
 .title_bar {
-	border-radius: 6px;
-/*	background: linear-gradient(to bottom, #3ba4e9 10%, #0b66a2 90%); */
+	background: url(../images/custom/titlebg.png) repeat-x;
+	border-radius: 6px!important;
 	overflow: hidden;
 	margin-bottom: 5px;
+	color: #fff;
+	min-height: 31px;
+	line-height: 20px;
+}
+.title_bar a {
 	color: #fff;
 }
 .sub_bar {
 	text-shadow: none;
 	background: none;
 	clear: both;
+	line-height: 1em;
 }
-h4.titlebg, h3.subbg, h4.subbg, .subbg {
+h3.titlebg, h4.titlebg, .titlebg {
+	color: #fff;
+	font-family: "Tahoma", sans-serif;
+	font-weight: bold;
+	overflow: hidden;
+	padding: 6px 12px 5px 12px;
+	text-shadow: none;
+}
+
+h3.subbg, h4.subbg, .subbg {
 	border: 2px solid #67d1ff;
 	border-radius: 6px;
 	box-shadow: 0px 0px 0px 2px #116ba1;
@@ -3927,41 +4061,17 @@ h4.titlebg, h3.subbg, h4.subbg, .subbg {
 	font-family: "Tahoma", sans-serif;
 	font-weight: bold;
 	overflow: hidden;
-	padding: 3px 12px 3px 12px;
+	padding: 6px 12px 5px 12px;
 	text-shadow: none;
 	margin: 2px 2px 5px 2px;
 }
-h3.titlebg {
-/*	border-top: 1px solid #10689d;
-	border-bottom: 1px solid #2b94d8;
-	border-left: none;
-	border-right: none;
-	box-shadow: 0 0 0 1px #137abb, 0 0 0 1px #137abb;
-	background: linear-gradient(to bottom, #2890d4 10%, #10689d 90%); */
-	color: #fff;
-	font-family: "Tahoma", sans-serif;
-	font-weight: bold;
-	overflow: hidden;
-	padding: 6px 12px 5px 12px;
-	text-shadow: none;
-	margin: 0 -3px 0 -3px;
-}
-/* .titlebg {
-	background: none;
-	color: #555;
-	font-family: "Tahoma", sans-serif;
-	font-weight: bold;
-	overflow: hidden;
-	padding: 6px 12px 5px 12px;
-	text-shadow: none;
-} */
 .titlebg a, .subbg a {
 	background: none;
 	color: #fff;
 	text-decoration: none;
 }
 #info_center .titlebg a {
-	color: #346
+	color: #fff;
 }
 .title_bar + .windowbg, .title_bar + .roundframe {
 	margin-top: -1px;
@@ -4124,11 +4234,13 @@ h3.profile_hd::before,
 /* Those classes are sharing exact same gradient. */
 /* Background of buttons */
 .dropmenu li li:hover, .dropmenu li li:hover > a, .dropmenu li li a:focus, .dropmenu li li a:hover {
-	background: #126bf1;
+	background: url(../images/custom/topnav.jpg) repeat-x;
+    border: none;
+    box-shadow: none;
 	color: #fff;
 }
 .quickbuttons > li, .quickbuttons li ul {
-	background: #fff; /* fallback for some browsers */
+	background: #eee; /* fallback for some browsers */
 }
 .quickbuttons li ul li a:hover, .quickbuttons ul li a:focus {
 	background: #5b7fb1; /* fallback for some browsers */
@@ -4137,12 +4249,10 @@ h3.profile_hd::before,
 .inline_mod_check {
 	background: #fff; /* fallback for some browsers */
 	background-image: linear-gradient(#e2e9f3 0%, #fff 70%);
+	margin-left: -1px;
 }
 /* Well some of them has different gradient effect on hover */
-.button:hover, .quickbuttons li:hover {
-/*	background: #fff;
-	background-image: linear-gradient(to bottom, #fff 0%, #e2e9f3 70%); */
-}
+ 
 /* If it fits I sits... */
 .navigate_section ul {
 	background: #fff;
@@ -4150,9 +4260,6 @@ h3.profile_hd::before,
 .popup_content {
 	background: #fff;
 	background-image: linear-gradient(to bottom, #fff 0%, #f1f3f5 95%);
-}
-.up_contain {
-	background: linear-gradient(to bottom, #fff 0%, #f1f3f5 95%);
 }
 .post_options ul, .post_options ul a:focus {
 	background: #fff; /* fallback for some browsers */
@@ -4259,7 +4366,7 @@ h3.profile_hd::before,
 	margin-top: 12px;
 }
 #attachment_previews {
-    display: none;
+	 display: none;
 }
 #attachment_previews div.descbox > div,
 #attachment_previews div.errorbox > div,
@@ -4342,7 +4449,7 @@ input[name="attachBBC"] {
 	margin: 0 0 10px 0 !important;
 }
 .noup  .titlebg {
-	color: #444;
+	color: #fff;
 }
 .information.noup {
 	border-radius: 0;
@@ -4432,20 +4539,60 @@ img.theme_thumbnail {
 	word-break: break-word;
 }
 /* Create equal columns that floats next to each other */
+/* Flexy Wexy Grid */
+
 .column {
-  float: right;
-  width: 30%;
-/*  padding: none; */
+  flex-basis: 100%;
 }
 
-/* Clear floats after the columns */
-.row:after {
-  content: "";
-  display: table;
-  clear: both;
+@media screen and (min-width: 800px) {
+  .row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+  }
+  .column {
+    flex: 1;
+  }
+  ._25 {
+    flex: 2.5;
+  }
+  ._5 {
+    flex: 5;
+  }
+}
+
+.column {
+    padding: 0px;
+    border: none;
+    margin: 5px 0;
+    background: transparent;
+    text-align: center;
+	font-size: 0.8em;
+}
+.column p {
+	font-weight: 700;
+}
+@media screen and (max-width: 800px) {
+  .column p {
+    display: inline;
+  }
+}
+.column h2 {
+	font-weight: 700;
+	color: #1776b6;
+	text-decoration: none;
+	font-size: 1.2em;
 }
 
 /* For the Packages Permissions th */
 form th {
 	color: #000;
+}
+
+input[type="checkbox"] { /* change "blue" browser chrome to red */
+  filter: hue-rotate(343deg);						
+}
+input[type="radio"] { /* change "blue" browser chrome to red */
+  filter: hue-rotate(343deg);						
 }
